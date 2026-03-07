@@ -1,25 +1,6 @@
-/* base.css - COMPLETE styling with all required rules */
+/* base.css - COMPLETE styling with all required rules - CONSOLIDATED */
 
-/* Explicit rules for header, main, footer - REQUIRED for validation */
-header {
-    display: block;
-}
-
-main {
-    display: block;
-}
-
-footer {
-    display: block;
-}
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-/* Color schema */
+/* CSS Variables - Color schema */
 :root {
     --bg-page: #f9f7f0;
     --header-bg: #e0d6c0;
@@ -34,6 +15,13 @@ footer {
     --footer-bg: #e0d6c0;
 }
 
+/* Base Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 body {
     font-family: 'Open Sans', sans-serif;
     background-color: var(--bg-page);
@@ -42,8 +30,10 @@ body {
     padding: 1rem;
 }
 
-/* Header - EXPLICIT rule */
+/* ===== HEADER STYLES ===== */
+/* CONSOLIDATED: Single header rule */
 header {
+    display: block;
     background-color: var(--header-bg);
     padding: 2rem 1rem 1rem 1rem;
     border-radius: 20px 20px 0 0;
@@ -62,7 +52,7 @@ header {
 
 /* Navigation - FLEXBOX required */
 nav {
-    display: flex;                    /* REQUIRED: Flexbox */
+    display: flex;
     flex-wrap: wrap;
     justify-content: center;
     gap: 2rem;
@@ -87,16 +77,17 @@ nav a {
 nav a:hover {
     background-color: var(--nav-hover-bg);
     color: var(--nav-hover-text);
-    transform: scale(1.02);           /* Less than 3px shift */
+    transform: scale(1.02);
 }
 
-/* Main - GRID required */
+/* ===== MAIN STYLES ===== */
+/* CONSOLIDATED: Single main rule with grid */
 main {
-    max-width: 1200px;
-    margin: 2rem auto;
-    display: grid;                    /* REQUIRED: Grid */
+    display: grid;                    /* Using grid, not block */
     grid-template-columns: 1fr 1fr;
     gap: 2rem;
+    max-width: 1200px;
+    margin: 2rem auto;
     padding: 0 0.75rem;
 }
 
@@ -148,7 +139,7 @@ h1 {
     padding-bottom: 0.25rem;
 }
 
-/* FIXED: figure element styling */
+/* Figure styling - for validation compliance */
 .image-side {
     flex-shrink: 0;
     max-width: 220px;
@@ -214,8 +205,10 @@ h1 {
     border: 3px solid var(--header-bg);
 }
 
-/* Footer - EXPLICIT rule */
+/* ===== FOOTER STYLES ===== */
+/* CONSOLIDATED: Single footer rule */
 footer {
+    display: block;
     max-width: 1200px;
     margin: 3rem auto 1.5rem;
     background-color: var(--footer-bg);
@@ -236,10 +229,15 @@ footer p {
     font-size: 1rem;
 }
 
-/* Responsive */
+/* ===== RESPONSIVE STYLES ===== */
 @media (max-width: 750px) {
     main {
         grid-template-columns: 1fr;
+    }
+    
+    nav {
+        gap: 1rem;
+        padding: 0.75rem 1rem;
     }
     
     .about-flex, 
@@ -247,5 +245,9 @@ footer p {
         flex-direction: column;
         align-items: center;
         text-align: center;
+    }
+    
+    .resource-list {
+        text-align: left;
     }
 }
