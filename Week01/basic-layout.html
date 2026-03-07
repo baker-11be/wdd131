@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mary Johnson · WDD 131 · basic layout</title>
+  <!-- external CSS: styles/layout.css -->
+  <link rel="stylesheet" href="styles/layout.css">
+</head>
+<body>
+  <!-- using CSS Grid on body as allowed in this straightforward layout -->
+  <header>
+    <!-- header content + navigation inside header (semantic) -->
+    <div class="header-placeholder">Header Content</div>
+    <nav>
+      <ul class="nav-flex">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Projects</a></li>
+        <li><a href="#">Services</a></li>
+        <li><a href="#">Contact Us</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <!-- main grid area: contains both main article and aside -->
+    <article class="main-content">
+      <h2>Main Content</h2>
+      <p>placeholder text for the primary article area. It demonstrates how the grid places content. You can also insert an image placeholder below.</p>
+      <!-- placeholder "image" as simple coloured block + emoji, but text is enough -->
+      <div class="img-placeholder">📷 image placeholder</div>
+    </article>
+    <aside class="aside-content">
+      <h2>Aside Content</h2>
+      <p>sidebar with placeholder text. Additional navigation or related links could go here.</p>
+      <div class="img-placeholder small">🖼️ aside img</div>
+    </aside>
+  </main>
+
+  <footer>
+    <p>Footer Content</p>
+    <p class="small-note">© 2025 · basic layout for WDD 131</p>
+  </footer>
+
+  <!-- optional small note: lighthouse & validation friendly -->
+</body>
+</html>

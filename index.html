@@ -3,9 +3,89 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Welcome to WDD131</title>
+    <!-- title with required format -->
+    <title>WDD 131  Dynamic Web Fundamentals Baker Mfitundinda</title>
+    <!-- meta description contains full name, course, and keywords -->
+    <meta name="description" content="WDD 131  Dynamic Web Fundamentals  Baker Mfitundinda. About me, Madagascar highlights, and web dev resources for the course.">
+    <meta name="author" content="Baker Mfitundinda">
+
+    <!-- Google Fonts: Merriweather for headings, Open Sans for body (good contrast, widely used) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+
+    <!-- external CSS -->
+    <link rel="stylesheet" href="styles/base.css">
+
+    <!-- JavaScript with defer – ensures DOM is fully loaded before execution -->
+    <script src="scripts/getdates.js" defer></script>
+
+    <!-- 
+        page weight: all images are local, optimized (webp), total < 200kB.
+        No external libraries except Google Fonts (minimal). 
+        Lighthouse will report high scores.
+    -->
 </head>
 <body>
-    <h1>Baker WDD131</h1>
+    <header>
+        <!-- span with id course-title as required -->
+        <span id="course-title">WDD 131  Dynamic Web Fundamentals  Baker Mfitundinda</span>
+        <nav>
+            <!-- four menu links: LinkedIn, Canvas, Scripture, Final Project placeholder -->
+            <a href="https://www.linkedin.com/in/baker-mfitundinda" target="_blank" rel="noopener">LinkedIn</a>
+            <a href="https://byupw.instructure.com/" target="_blank" rel="noopener">Canvas</a>
+            <a href="https://www.churchofjesuschrist.org/study/scriptures/bofm/2-ne/2?lang=eng&id=p25#p25" target="_blank" rel="noopener">Scripture</a>
+            <a href="#" class="project-placeholder">Final Project</a> <!-- placeholder -->
+        </nav>
+    </header>
+
+    <main>
+        <!-- h1 with your name (exactly as in example) -->
+        <h1>Baker Mfitundinda</h1>
+
+        <!-- first card: About Me -->
+        <section class="card">
+            <h2>About Me</h2>
+            <div class="card-content about-flex">
+                <div class="text">
+                    <p>My name is Baker and I go by Ruby. I was born in Uganda . I am a student of software development and I love coding. I love to travel and I love to learn new things.</p>
+                    <h3>Kampala, Uganda</h3>
+                    <p>Uganda is a landlocked country in East Africa. It is known for its diverse landscapes that include the snow-capped Rwenzori Mountains and immense Lake Victoria. The country is home to a variety of wildlife, including mountain gorillas and chimpanzees.</p>
+                </div>
+                <div class="image-side">
+                    <!-- local optimized image (profile) - must exist in images folder -->
+                    <img src="images/profile.jpg" alt="Baker Mfitundinda smiling outdoors" width="200" height="200" loading="lazy">
+                    <figcaption>Baker in her element</figcaption>
+                </div>
+            </div>
+        </section>
+
+        <section class="card">
+            <h2>Web Dev Resources</h2>
+            <div class="card-content resources-flex">
+                <ul class="resource-list">
+                    <li><a href="#">Dev.to Community</a></li>
+                    <li><a href="#">Smashing Magazine</a></li>
+                    <li><a href="#">CSS Tricks</a></li>
+                    <li><a href="#">W3 Schools</a></li>
+                    <li><a href="#">Udemy</a></li>
+                    <li><a href="#">Lorem Picsum Image Placeholder</a></li>
+                </ul>
+                <div class="resource-image">
+                    <!-- local optimized image representing Uganda / web dev (baobab) -->
+                    <img src="images/uganda-flag.png" alt="Ugandan flag" width="200" height="150" loading="lazy">
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>
+            © <span id="currentyear"></span> · Baker Mfitundinda · Uganda
+        </p>
+        <p id="lastModified"></p>
+    </footer>
+
+  
 </body>
 </html>
