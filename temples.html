@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Temple Album | WDD 131</title>
+    <meta name="description" content="A responsive temple album page with hamburger menu navigation">
+    <meta name="author" content="Mfitundinda Baker">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+    
+    <!-- CSS Links - Mobile First Approach -->
+    <link rel="stylesheet" href="styles/temples.css">
+    <link rel="stylesheet" href="styles/temples-large.css">
+    
+    <!-- Deferred JavaScript -->
+    <script src="scripts/temples.js" defer></script>
+</head>
+<body>
+    <header>
+        <h1>Temple Album</h1>
+        <button id="hamburger-btn" class="hamburger-btn" aria-label="Toggle navigation menu">☰</button>
+        <nav id="main-nav" class="navigation">
+            <ul>
+                <li><a href="#" class="active">Home</a></li>
+                <li><a href="#">Old</a></li>
+                <li><a href="#">New</a></li>
+                <li><a href="#">Large</a></li>
+                <li><a href="#">Small</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h2>Home</h2>
+        
+        <div class="temple-grid">
+            <figure>
+                <img src="https://churchofjesuschristtemples.org/assets/img/temples/salt-lake-temple/salt-lake-temple-17439-thumb.webp" alt="Salt Lake Temple" loading="lazy" width="300" height="200">
+                <figcaption>Salt Lake Temple</figcaption>
+            </figure>
+
+            <figure>
+                <img src="https://churchofjesuschristtemples.org/assets/img/temples/provo-utah-temple/provo-utah-temple-4273-thumb.webp" alt="Provo Utah Temple" loading="lazy" width="300" height="200">
+                <figcaption>Provo Utah Temple</figcaption>
+            </figure>
+
+            <figure>
+                <img src="https://churchofjesuschristtemples.org/assets/img/temples/san-diego-california-temple/san-diego-california-temple-40755-thumb.webp" alt="San Diego California Temple" loading="lazy" width="300" height="200">
+                <figcaption>San Diego California Temple</figcaption>
+            </figure>
+
+            <figure>
+                <img src="https://churchofjesuschristtemples.org/assets/img/temples/washington-d-c-temple/washington-d-c-temple-11819-thumb.webp" alt="Washington D.C. Temple" loading="lazy" width="300" height="200">
+                <figcaption>Washington D.C. Temple</figcaption>
+            </figure>
+
+            <figure>
+                <img src="https://churchofjesuschristtemples.org/assets/img/temples/laie-hawaii-temple/laie-hawaii-temple-13741-thumb.webp" alt="Laie Hawaii Temple" loading="lazy" width="300" height="200">
+                <figcaption>Laie Hawaii Temple</figcaption>
+            </figure>
+
+            <figure>
+                <img src="https://churchofjesuschristtemples.org/assets/img/temples/rome-italy-temple/rome-italy-temple-51863-thumb.webp" alt="Rome Italy Temple" loading="lazy" width="300" height="200">
+                <figcaption>Rome Italy Temple</figcaption>
+            </figure>
+
+            <figure>
+                <img src="https://churchofjesuschristtemples.org/assets/img/temples/lima-peru-los-olivos-temple/lima-peru-los-olivos-temple-41055-thumb.webp" alt="Lima Peru Temple" loading="lazy" width="300" height="200">
+                <figcaption>Lima Peru Temple</figcaption>
+            </figure>
+
+            <figure>
+                <img src="https://churchofjesuschristtemples.org/assets/img/temples/tokyo-japan-temple/tokyo-japan-temple-1779-thumb.webp" alt="Tokyo Japan Temple" loading="lazy" width="300" height="200">
+                <figcaption>Tokyo Japan Temple</figcaption>
+            </figure>
+
+            <figure>
+                <img src="https://churchofjesuschristtemples.org/assets/img/temples/paris-france-temple/paris-france-temple-11073-thumb.webp" alt="Paris France Temple" loading="lazy" width="300" height="200">
+                <figcaption>Paris France Temple</figcaption>
+            </figure>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; <span id="current-year"></span> Temple Album | Mfitundinda Baker</p>
+        <p>Last Modified: <span id="last-modified"></span></p>
+    </footer>
+</body>
+</html>

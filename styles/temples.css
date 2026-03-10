@@ -1,0 +1,154 @@
+/* Mobile First Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #fff;
+}
+
+/* Header Styles */
+header {
+    background-color: #2c3e50;
+    color: white;
+    padding: 1rem;
+    text-align: center;
+    position: relative;
+}
+
+header h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.8rem;
+    margin-bottom: 0.5rem;
+}
+
+/* Hamburger Button */
+.hamburger-btn {
+    display: block;
+    background: transparent;
+    border: none;
+    color: white;
+    font-size: 2rem;
+    cursor: pointer;
+    padding: 0.5rem;
+    position: absolute;
+    top: 0.5rem;
+    right: 1rem;
+}
+
+.hamburger-btn:hover {
+    color: #e74c3c;
+}
+
+/* Navigation Menu - Mobile */
+.navigation {
+    width: 100%;
+}
+
+.navigation ul {
+    list-style: none;
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    margin-top: 1rem;
+}
+
+.navigation.show ul {
+    display: flex;
+}
+
+.navigation li {
+    text-align: center;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.navigation li:last-child {
+    border-bottom: none;
+}
+
+.navigation a {
+    display: block;
+    color: white;
+    text-decoration: none;
+    padding: 0.75rem;
+    font-weight: 500;
+    transition: background-color 0.3s;
+}
+
+.navigation a:hover {
+    background-color: #e74c3c;
+}
+
+.navigation a.active {
+    background-color: #34495e;
+}
+
+/* Main Content */
+main {
+    max-width: 1200px;
+    margin: 1.5rem auto;
+    padding: 0 1rem;
+}
+
+main h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2rem;
+    color: #2c3e50;
+    text-align: left;
+    margin-bottom: 1.5rem;
+}
+
+/* Temple Grid - Mobile: 1 column */
+.temple-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+}
+
+figure {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+img {
+    width: 100%;
+    height: auto;
+    display: block;
+    aspect-ratio: 3/2;
+    object-fit: cover;
+}
+
+figcaption {
+    text-align: center;
+    padding: 0.75rem;
+    font-size: 0.95rem;
+    color: #333;
+    background-color: #f9f9f9;
+    border-top: 1px solid #eee;
+}
+
+/* Footer */
+footer {
+    background-color: #2c3e50;
+    color: white;
+    text-align: center;
+    padding: 1.5rem;
+    margin-top: 2rem;
+    font-size: 0.9rem;
+}
+
+footer p {
+    margin: 0.25rem 0;
+}
+
+footer span {
+    font-weight: 700;
+    color: #e74c3c;
+}
