@@ -9,6 +9,7 @@ document.addEventListener('DOMContentLoaded', function() {
         hamburgerBtn.addEventListener('click', function() {
             mainNav.classList.toggle('show');
             
+            // Change button symbol based on menu state
             if (mainNav.classList.contains('show')) {
                 hamburgerBtn.innerHTML = '✕';
                 hamburgerBtn.setAttribute('aria-label', 'Close navigation menu');
@@ -26,10 +27,11 @@ document.addEventListener('DOMContentLoaded', function() {
                 navLinks.forEach(l => l.classList.remove('active'));
                 this.classList.add('active');
                 
-                // Close menu on mobile
+                // Close menu on mobile (below 768px)
                 if (window.innerWidth < 768) {
                     mainNav.classList.remove('show');
                     hamburgerBtn.innerHTML = '☰';
+                    hamburgerBtn.setAttribute('aria-label', 'Open navigation menu');
                 }
             });
         });
@@ -39,6 +41,7 @@ document.addEventListener('DOMContentLoaded', function() {
             if (window.innerWidth >= 768) {
                 mainNav.classList.remove('show');
                 hamburgerBtn.innerHTML = '☰';
+                hamburgerBtn.setAttribute('aria-label', 'Open navigation menu');
             }
         });
     }
@@ -62,12 +65,12 @@ document.addEventListener('DOMContentLoaded', function() {
         lastModifiedSpan.textContent = lastModified.toLocaleDateString('en-US', options);
     }
 
-    // Image error handling
+    // Image error handling (optional but good practice)
     const images = document.querySelectorAll('img');
     images.forEach(img => {
         img.addEventListener('error', function() {
             console.log('Image failed to load, using placeholder');
-            this.src = 'data:image/svg+xml,%3Csvg xmlns=\'http://www.w3.org/2000/svg\' width=\'300\' height=\'200\' viewBox=\'0 0 300 200\'%3E%3Crect width=\'300\' height=\'200\' fill=\'%23ccc\'/%3E%3Ctext x=\'150\' y=\'100\' text-anchor=\'middle\' dy=\'.3em\' fill=\'%23333\' font-family=\'Arial\' font-size=\'14\'%3ETemple Image%3C/text%3E%3C/svg%3E';
+            this.src = 'data:image/svg+xml,%3Csvg xmlns=\'http://www.w3.org/2000/svg\' width=\'300\' height=\'200\' viewBox=\'0 0 300 200\'%3E%3Crect width=\'300\' height=\'200\' fill=\'%23cccccc\'/%3E%3Ctext x=\'150\' y=\'100\' text-anchor=\'middle\' dy=\'.3em\' fill=\'%23333333\' font-family=\'Arial\' font-size=\'14\'%3ETemple Image%3C/text%3E%3C/svg%3E';
         });
     });
 });
