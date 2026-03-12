@@ -30,8 +30,8 @@ body {
     padding: 1rem;
 }
 
-/* ===== HEADER STYLES ===== */
-/* CONSOLIDATED: Single header rule */
+
+
 header {
     display: block;
     background-color: var(--header-bg);
@@ -80,7 +80,7 @@ nav a:hover {
     transform: scale(1.02);
 }
 
-/* ===== MAIN STYLES ===== */
+
 /* CONSOLIDATED: Single main rule with grid */
 main {
     display: grid;                    /* Using grid, not block */
