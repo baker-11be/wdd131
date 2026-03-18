@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Images | Week 03</title>
+    <link rel="stylesheet" href="styles/responsive-images.css">
+</head>
+<body>
+    <main>
+        <div class="hero">
+            <picture>
+                <!-- Large screen: 1500px image -->
+                <source 
+                    srcset="images/hero-large.webp" 
+                    media="(min-width: 1000px)">
+                
+                <!-- Medium screen: 1000px image -->
+                <source 
+                    srcset="images/hero-medium.webp" 
+                    media="(min-width: 500px)">
+                
+                <!-- Small screen: 500px image (fallback) -->
+                <img 
+                    src="images/hero-small.webp" 
+                    alt="Beautiful temple landscape showing architectural details and surrounding scenery"
+                    width="1500" 
+                    height="750"
+                    loading="lazy">
+            </picture>
+        </div>
+        
+        <!-- Optional: Add content to demonstrate responsive behavior -->
+        <section class="content">
+            <h1>Responsive Images Example</h1>
+            <p>This hero image uses the &lt;picture&gt; element to serve different image sizes based on screen width. The browser automatically selects the most appropriate image, saving bandwidth on mobile devices while maintaining quality on larger screens.</p>
+        </section>
+    </main>
+</body>
+</html>

@@ -1,0 +1,67 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #333;
+    color: white;
+    padding: 1rem;
+}
+
+.banner {
+    background-color: #f0f0f0;
+    color: #333;
+    padding: 1rem;
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+main {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    padding: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+main h2 {
+    grid-column: 1 / -1;
+    text-align: left;
+    margin-top: 0;
+}
+
+section {
+    background-color: #f9f9f9;
+    padding: 1.5rem;
+    border-radius: 8px;
+}
+
+.callout {
+    background-color: #702963;
+    color: white;
+    padding: 2rem;
+    margin: 2rem;
+    border-radius: 8px;
+    max-width: 500px;
+}
+
+.callout h2 {
+    text-align: left;
+    color: white;
+    margin-top: 0;
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    padding: 1rem;
+    text-align: left;
+    margin-top: 2rem;
+}
+
+/* For the contrast ratio fix, ensure the callout has good contrast */
+/* Original colors had contrast ratio of 2.14 (fails WCAG) */
+/* Fixed with white text on #702963 - contrast ratio should be better */

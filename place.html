@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kampala, Uganda-Country Page</title>
+  <!-- Google Fonts: Roboto (regular 400, bold 700) -->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <!-- CSS link -->
+  <link rel="stylesheet" href="styles/place.css">
+  <!-- JavaScript with defer -->
+  <script src="scripts/place.js" defer></script>
+</head>
+<body>
+  <div class="page-wrapper">
+    <h1>Kampala, Uganda</h1>
+
+    <!-- Hero section with responsive images (srcset) WebP -->
+    <div class="hero">
+      <picture>
+        <!-- Large: min-width 1000px -->
+        <source srcset="images/lake-victoria.webp" media="(min-width: 1000px)" type="image/webp">
+        <!-- Medium: min-width 550px -->
+        <source srcset="images/lake-victoria.webp" media="(min-width: 550px)" type="image/webp">
+        <!-- Small fallback (also WebP) -->
+        <img src="images/lake-victoria.webp" alt="Kampala city landscape scenery" width="1500" height="750">
+      </picture>
+      <!-- Main content cards over the image -->
+      <main class="country-main">
+        <!-- Left column: data section -->
+        <section class="info-card data-section">
+          <h2>Data</h2>
+          <ul class="data-list">
+            <li><span class="data-label">Area:</span> <span class="data-value">189 sq km</span></li>
+            <li><span class="data-label">Population:</span> <span class="data-value">1,650,800</span></li>
+            <li><span class="data-label">Capital:</span> <span class="data-value">Kampala</span></li>
+            <li><span class="data-label">Languages:</span> <span class="data-value">English, Luganda</span></li>
+            <li><span class="data-label">Currency:</span> <span class="data-value">Ugandan Shilling (UGX)</span></li>
+            <li><span class="data-label">Time Zone:</span> <span class="data-value">UTC+3</span></li>
+            <li><span class="data-label">Calling Code:</span> <span class="data-value">+256</span></li>
+            <li><span class="data-label">Internet TLD:</span> <span class="data-value">.ug</span></li>
+          </ul>
+        </section>
+
+        <!-- Right column: weather section -->
+        <section class="info-card weather-section">
+          <div class="weather-header-desktop">
+            <h2>Weather</h2>
+            <span class="weather-icon-mobile" aria-hidden="true">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="40" height="40">
+                <circle cx="24" cy="28" r="10" fill="#f4c542" stroke="#222" stroke-width="1.5"/>
+                <circle cx="42" cy="34" r="12" fill="#e0e0e0" stroke="#222" stroke-width="1.5"/>
+                <circle cx="50" cy="38" r="8" fill="#e0e0e0" stroke="#222" stroke-width="1.5"/>
+                <circle cx="30" cy="40" r="12" fill="#e0e0e0" stroke="#222" stroke-width="1.5"/>
+                <path d="M22 38 L30 44 L40 40 L48 44 L52 38" stroke="#555" fill="none" stroke-width="2"/>
+              </svg>
+            </span>
+          </div>
+
+          <div class="weather-details">
+            <p><strong>Temperature:</strong> <span id="tempValue" data-temp="25.3">25.3°C</span></p>
+            <p><strong>Conditions:</strong> Partly cloudy</p>
+            <p><strong>Wind:</strong> <span id="windSpeedValue" data-windspeed="5.8">5.8 km/h</span></p>
+            <p><strong>Wind Chill:</strong> <span class="windchill-value" id="windchillDisplay">N/A</span></p>
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <!-- Footer with left alignment, current year and last modified -->
+    <footer>
+      <p>&copy; <span id="currentyear"></span> | Baker Mfitundinda | Kampala, Uganda</p>
+      <p class="last-modified">Last modified: <span id="lastModified"></span></p>
+    </footer>
+  </div>
+</body>
+</html>

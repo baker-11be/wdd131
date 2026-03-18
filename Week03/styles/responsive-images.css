@@ -1,0 +1,96 @@
+/* Reset default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f5f5f5;
+}
+
+main {
+    max-width: 1600px;
+    margin: 0 auto;
+    padding: 1rem;
+}
+
+/* Hero section styles */
+.hero {
+    margin-bottom: 2rem;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Method 1: Simple responsive images */
+.hero img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Method 2: Using object-fit for more control (commented out) */
+/* 
+.hero {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 2 / 1; 
+}
+
+.hero img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+*/
+
+/* Method 3: Using aspect-ratio property */
+.hero picture {
+    display: block;
+    aspect-ratio: 2 / 1;
+    background-color: #e0e0e0; /* Placeholder color while loading */
+}
+
+/* Content section styles */
+.content {
+    background-color: white;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.content h1 {
+    margin-bottom: 1rem;
+    color: #2c3e50;
+    font-size: clamp(1.5rem, 4vw, 2.5rem);
+}
+
+.content p {
+    margin-bottom: 1rem;
+    font-size: clamp(1rem, 2vw, 1.125rem);
+}
+
+/* Demo info box */
+.note {
+    background-color: #e8f4fd;
+    border-left: 4px solid #3498db;
+    padding: 1rem;
+    margin-top: 1.5rem;
+    border-radius: 0 4px 4px 0;
+}
+
+.note p {
+    margin-bottom: 0;
+}
+
+.note code {
+    background-color: #d4e6f1;
+    padding: 0.2rem 0.4rem;
+    border-radius: 4px;
+    font-family: 'Courier New', monospace;
+}

@@ -1,0 +1,255 @@
+/* GLOBAL CSS VARIABLES (root pseudo-class) – colors inspired by Ugandan flag: black, yellow, red */
+:root {
+  --primary-dark: #1d577f;
+  --accent-gold: #D4AF37;        /* gold / yellow */
+  --accent-red: #C8102E;          /* vibrant red */
+  --light-bg: #f9f7f5;            /* soft off-white */
+  --text-light: #ffffff;
+  --text-dark: #222;
+  --border-gray: #bbb;
+  --shadow-sm: 0 12px 24px rgba(0, 0, 0, 0.18);
+  --font-main: 'Roboto', sans-serif;
+  --border-standard: 1px solid #777;  /* CSS variable for border shorthand */
+  --panel-bg: rgba(255, 255, 255, 0.86);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-main);
+  background-color: var(--light-bg);
+  color: var(--text-dark);
+  line-height: 1.5;
+  padding: 1rem 0;
+}
+
+/* Main container with max width for larger screens */
+.page-wrapper {
+  max-width: 1100px;
+  margin: 0 auto;
+  background-color: white;
+  box-shadow: var(--shadow-sm);
+  border-radius: 0;
+  overflow: hidden;
+}
+
+h1 {
+  background-color: var(--primary-dark);
+  color: var(--text-light);
+  text-align: center;
+  padding: 0.8rem 1rem;
+  font-size: 2rem;
+  font-weight: 700;
+  margin: 0;
+  border-bottom: 4px solid #d4d000;
+}
+
+/* Hero section */
+.hero {
+  position: relative;
+  background-color: #333;
+  min-height: 32rem;
+}
+
+.hero picture,
+.hero img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.country-main {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 2.5rem 1.75rem 1.5rem;
+  pointer-events: none;
+}
+
+.info-card {
+  width: min(100%, 250px);
+  background: var(--panel-bg);
+  border-radius: 8px;
+  padding: 1rem;
+  box-shadow: var(--shadow-sm);
+  pointer-events: auto;
+}
+
+.weather-section {
+  align-self: center;
+}
+
+/* Headings style */
+h2 {
+  font-weight: 700;
+  color: var(--text-light);
+  background-color: var(--primary-dark);
+  padding: 0.55rem 1rem;
+  margin-bottom: 0.9rem;
+  font-size: 1.45rem;
+  text-align: center;
+  border-radius: 4px;
+}
+
+/* Data section list styling */
+.data-list {
+  list-style: none;
+}
+
+.data-list li {
+  display: flex;
+  justify-content: center;
+  gap: 0.35rem;
+  padding: 0.2rem 0;
+  text-align: center;
+}
+
+.data-label {
+  font-weight: 700;
+  color: var(--text-dark);
+}
+
+.data-value {
+  font-weight: 400;
+}
+
+/* Weather header styling */
+.weather-header-desktop {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 0.9rem;
+}
+
+.weather-header-desktop h2 {
+  margin-bottom: 0;
+  width: 100%;
+}
+
+/* Mobile weather icon (SVG) */
+.weather-icon-mobile svg {
+  width: 40px;
+  height: 40px;
+  display: block;
+}
+
+/* Pseudo-element for wider view (emoticon after heading) */
+.weather-header-desktop::after {
+  content: " ⛅";
+  font-size: 2.2rem;
+  line-height: 1;
+  color: var(--accent-gold);
+  margin-left: 0.25rem;
+  display: none;
+}
+
+/* Weather icon visibility control */
+.weather-icon-mobile {
+  display: block;
+}
+
+/* Media query for wider view - show pseudo emoticon, hide SVG */
+@media (min-width: 700px) {
+  .weather-header-desktop::after {
+    display: inline-block;
+  }
+  .weather-icon-mobile {
+    display: none;
+  }
+}
+
+/* Weather details card */
+.weather-details {
+  color: #444;
+}
+
+.weather-details p {
+  display: flex;
+  justify-content: center;
+  gap: 0.35rem;
+  padding: 0.15rem 0;
+  text-align: center;
+}
+
+.weather-details strong {
+  color: var(--text-dark);
+}
+
+.windchill-value {
+  font-weight: 700;
+  color: #004080;
+}
+
+/* Footer styling */
+footer {
+  background-color: var(--primary-dark);
+  color: var(--text-light);
+  text-align: center;
+  padding: 1.5rem 2rem;
+  font-size: 0.95rem;
+  border-top: none;
+}
+
+footer p {
+  margin: 0.3rem 0;
+}
+
+.last-modified {
+  color: var(--text-light);
+  font-size: 0.9rem;
+}
+
+/* Responsive for small screens: stack columns */
+@media (max-width: 760px) {
+  h1 {
+    font-size: 1.6rem;
+  }
+
+  .hero {
+    min-height: auto;
+  }
+
+  .country-main {
+    position: static;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+    padding: 1rem;
+    background: rgba(0, 0, 0, 0.05);
+  }
+
+  .info-card {
+    width: min(100%, 320px);
+  }
+
+  .weather-header-desktop {
+    width: 100%;
+  }
+}
+
+/* Hover effect for data list items (pseudo-class example) */
+.data-list li:hover {
+  background-color: #f0e9d8;
+  transition: 0.2s;
+}
+
+/* Link pseudo-classes (for any future links) */
+a, a:visited {
+  color: var(--accent-gold);
+  text-decoration: none;
+}
+
+a:hover {
+  color: purple;
+  text-decoration: underline;
+}
+
+/* Ensure sufficient color contrast (AA level) */
+/* Checked with CSS Overview tool - all ratios pass */
