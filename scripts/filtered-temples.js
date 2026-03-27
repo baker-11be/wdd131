@@ -57,27 +57,7 @@ const temples = [
         area: 253015,
         imageUrl: "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/salt-lake-city-utah/400x250/salt-lake-temple-37762.jpg"
     },
-    {
-        templeName: "Rome Italy Temple",
-        location: "Rome, Italy",
-        dedicated: "2019, March, 10",
-        area: 40000,
-        imageUrl: "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/rome-italy/400x250/rome-italy-temple-exterior-2466498-wallpaper.jpg"
-    },
-    {
-        templeName: "Buenos Aires Argentina",
-        location: "Buenos Aires, Argentina",
-        dedicated: "1986, January, 17",
-        area: 30000,
-        imageUrl: "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/buenos-aires-argentina/400x250/buenos-aires-argentina-temple-1009725-wallpaper.jpg"
-    },
-    {
-        templeName: "Paris France Temple",
-        location: "Le Chesnay, France",
-        dedicated: "2017, May, 21",
-        area: 44175,
-        imageUrl: "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/paris-france/400x250/paris-france-temple-exterior-2017-04-10.jpg"
-    }
+    
 ];
 
 // Helper function to extract year from dedicated date
