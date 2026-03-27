@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Filtered Temple Album | WDD 131</title>
+    <meta name="description" content="A responsive temple album page with dynamic filtering and hamburger menu navigation">
+    <meta name="author" content="Baker Mfitundinda">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;700&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+    
+    <!-- CSS Links -->
+    <link rel="stylesheet" href="../styles/filtered-temples.css">
+    <link rel="stylesheet" href="../styles/filtered-temples-large.css">
+    
+    <!-- JavaScript -->
+    <script src="../scripts/filtered-temples.js" defer></script>
+</head>
+<body>
+    <header>
+        <h1>Temple Album</h1>
+        <button id="hamburger-btn" class="hamburger-btn" aria-label="Toggle navigation menu">☰</button>
+        <nav id="main-nav" class="navigation">
+            <ul>
+                <li><a href="#" data-filter="home" class="active" aria-current="page">Home</a></li>
+                <li><a href="#" data-filter="old">Old</a></li>
+                <li><a href="#" data-filter="new">New</a></li>
+                <li><a href="#" data-filter="large">Large</a></li>
+                <li><a href="#" data-filter="small">Small</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h2 id="page-title">All Temples</h2>
+        <div class="temple-grid" id="temple-grid">
+            <!-- Temple cards will be dynamically inserted here -->
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; <span id="current-year"></span> Temple Album | Baker Mfitundinda</p>
+        <p>Last Modified: <span id="last-modified"></span></p>
+    </footer>
+</body>
+</html>
