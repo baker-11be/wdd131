@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lazy Load Images</title>
+    <meta name="description" content="A demonstration of native lazy loading images with a fade-from-black CSS animation">
+    <meta name="author" content="Baker Mfitundinda">
+    <link rel="stylesheet" href="styles/lazyload.css">
+</head>
+<body>
+    <header>
+        <h2>WDD131 &ndash; Lazy Loading Demo</h2>
+    </header>
+    <main>
+        <h1>Lazy Loaded Images</h1>
+        <p class="intro">Scroll down to watch each image fade in from black as it enters the viewport.</p>
+
+        <img src="../images/laie-temple.webp" alt="Laie Hawaii Temple" class="lazy-img" loading="lazy" width="400" height="600">
+        <img src="../images/bahai-temple.webp" alt="Bahai Temple" class="lazy-img" loading="lazy" width="400" height="600">
+        <img src="../images/dc-temple.webp" alt="Washington DC Temple" class="lazy-img" loading="lazy" width="400" height="600">
+        <img src="../images/nauvoo.webp" alt="Nauvoo Temple" class="lazy-img" loading="lazy" width="400" height="600">
+        <img src="../images/rexburgidaho.webp" alt="Rexburg Idaho Temple" class="lazy-img" loading="lazy" width="400" height="600">
+        <img src="../images/washingdc.temple-dusk.webp" alt="Washington DC Temple at Dusk" class="lazy-img" loading="lazy" width="400" height="600">
+    </main>
+    <footer>
+        <p>&copy; 2026 Baker Mfitundinda</p>
+        <p>Last Modified: <span id="last-modified"></span></p>
+    </footer>
+    <script src="scripts/lazyload.js"></script>
+</body>
+</html>

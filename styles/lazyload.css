@@ -1,0 +1,19 @@
+h1{
+text-align: center;
+}
+main{
+    
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+}
+img{
+    width: 100%;
+    background: #000;
+    animation:fade 15s;
+
+}
+@keyframes fade {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
