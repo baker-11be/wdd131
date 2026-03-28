@@ -57,6 +57,20 @@ const temples = [
         area: 253015,
         imageUrl: "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/salt-lake-city-utah/400x250/salt-lake-temple-37762.jpg"
     },
+    {
+        templeName: "Accra Ghana",
+        location: "Accra, Ghana",
+        dedicated: "2004, January, 11",
+        area: 17500,
+        imageUrl: "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/accra-ghana/400x250/accra-ghana-temple-759298-wallpaper.jpg"
+    },
+    {
+        templeName: "Apia Samoa",
+        location: "Pesega, Apia, Samoa",
+        dedicated: "1983, August, 5",
+        area: 18691,
+        imageUrl: "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/apia-samoa/400x250/apia-samoa-temple-lds-460475-wallpaper.jpg"
+    },
     
 ];
 
