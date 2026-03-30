@@ -58,6 +58,7 @@ header h1 {
 }
 
 .navigation {
+    display: flex;
     width: 100%;
 }
 
