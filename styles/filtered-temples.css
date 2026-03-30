@@ -64,7 +64,7 @@ header h1 {
 
 .navigation ul {
     list-style: none;
-    display: none;
+    display: flex;
     flex-direction: column;
     width: 100%;
     margin-top: 1rem;
