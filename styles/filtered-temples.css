@@ -57,11 +57,13 @@ header h1 {
     outline-offset: 2px;
 }
 
+nav,
 .navigation {
     display: flex;
     width: 100%;
 }
 
+nav > ul,
 .navigation ul {
     list-style: none;
     display: flex;
