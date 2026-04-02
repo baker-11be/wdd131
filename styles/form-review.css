@@ -1,0 +1,219 @@
+:root {
+  --ink: #16212f;
+  --surface: #ffffff;
+  --paper: #f4f7fb;
+  --accent: #0f766e;
+  --accent-dark: #0a4f4a;
+  --line: #d7dde5;
+  --focus: #f59e0b;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  font-family: "Source Sans 3", Arial, sans-serif;
+  color: var(--ink);
+  background: radial-gradient(circle at top right, #d9f6f1 0%, #f4f7fb 38%, #edf2f8 100%);
+  display: flex;
+  flex-direction: column;
+}
+
+.page-header {
+  background: linear-gradient(110deg, #0f766e 0%, #155e75 100%);
+  color: #ffffff;
+  padding: 1.25rem 1rem;
+  text-align: center;
+}
+
+.page-header h1 {
+  margin: 0;
+  font-family: "Montserrat", "Trebuchet MS", sans-serif;
+  font-size: clamp(1.55rem, 2.8vw, 2.2rem);
+}
+
+.page-header p {
+  margin: 0.35rem 0 0;
+}
+
+main {
+  width: min(940px, 92%);
+  margin: 1.25rem auto 2rem;
+  flex: 1;
+}
+
+.review-form,
+.confirmation-card {
+  background-color: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(14, 30, 37, 0.08);
+}
+
+.review-form fieldset {
+  border: 0;
+  margin: 0;
+  padding: 1.15rem;
+}
+
+.review-form legend {
+  font-family: "Montserrat", "Trebuchet MS", sans-serif;
+  font-weight: 700;
+  padding: 0 0.3rem;
+  color: var(--accent-dark);
+}
+
+.sub-fieldset {
+  margin-top: 1rem;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  padding: 0.8rem;
+}
+
+.field-group {
+  margin-top: 1rem;
+}
+
+label,
+.rating-label {
+  font-weight: 600;
+}
+
+select,
+input[type="date"],
+input[type="text"],
+textarea {
+  width: 100%;
+  padding: 0.6rem;
+  border-radius: 8px;
+  border: 1px solid #a9b6c8;
+  font: inherit;
+  color: inherit;
+  background-color: #ffffff;
+  margin-top: 0.35rem;
+}
+
+textarea {
+  resize: vertical;
+}
+
+input:focus,
+select:focus,
+textarea:focus,
+.rating-group input:focus + label {
+  outline: 3px solid var(--focus);
+  outline-offset: 2px;
+}
+
+.rating-group {
+  margin-top: 0.35rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.55rem;
+}
+
+.rating-group input[type="radio"] {
+  position: absolute;
+  opacity: 0;
+}
+
+.rating-group label {
+  cursor: pointer;
+  border: 1px solid #bcc7d4;
+  border-radius: 8px;
+  padding: 0.4rem 0.7rem;
+  min-width: 4.5rem;
+  text-align: center;
+  background: #f9fbfe;
+}
+
+.rating-group input[type="radio"]:checked + label {
+  background: #fff4d8;
+  border-color: #f59e0b;
+}
+
+.checkbox-group {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  margin-top: 0.45rem;
+}
+
+.checkbox-group input {
+  width: 1rem;
+  height: 1rem;
+}
+
+.actions {
+  margin-top: 1.25rem;
+}
+
+input[type="submit"] {
+  border: 0;
+  border-radius: 10px;
+  padding: 0.7rem 1rem;
+  font-weight: 700;
+  font-size: 1rem;
+  color: #ffffff;
+  background-color: var(--accent);
+  cursor: pointer;
+}
+
+input[type="submit"]:hover {
+  background-color: var(--accent-dark);
+}
+
+.confirmation-card {
+  padding: 1.15rem;
+}
+
+.confirmation-card h2 {
+  font-family: "Montserrat", "Trebuchet MS", sans-serif;
+  margin-top: 0;
+  color: var(--accent-dark);
+}
+
+.back-link {
+  color: #0b4d83;
+  font-weight: 700;
+}
+
+.back-link:hover {
+  text-decoration: none;
+}
+
+footer {
+  text-align: center;
+  padding: 0.9rem;
+  background: #0f172a;
+  color: #e5e7eb;
+}
+
+footer p {
+  margin: 0.25rem 0;
+}
+
+.sr-only {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+}
+
+@media (min-width: 760px) {
+  .review-form fieldset,
+  .confirmation-card {
+    padding: 1.6rem;
+  }
+
+  .field-group {
+    max-width: 680px;
+  }
+}
