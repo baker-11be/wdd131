@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Trail Compass helps you choose local hikes with practical planning tips and seasonal guidance.">
+  <meta name="author" content="Baker Mfitundinda">
+  <title>Trail Compass | Home</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@700&family=Work+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <script src="scripts/app.js" defer></script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-content">
+      <a class="brand" href="index.html" aria-label="Trail Compass home">
+        <span class="brand-mark" aria-hidden="true">TC</span>
+        <span>Trail Compass</span>
+      </a>
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav">Menu</button>
+      <nav id="site-nav" class="site-nav" aria-label="Primary navigation">
+        <a class="active" href="index.html">Home</a>
+        <a href="trails.html">Trails</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <img src="../images/lake-victoria.webp" alt="Hazy sunrise over Lake Victoria" width="1200" height="800" loading="lazy">
+      <div class="hero-copy container">
+        <p class="eyebrow">Plan Smarter Adventures</p>
+        <h1>Choose Trails That Match Your Day, Skill, and Pace</h1>
+        <p>Trail Compass helps hikers compare routes quickly, check practical hike details, and decide what to pack before leaving home.</p>
+        <a class="btn" href="trails.html">Browse Trail Library</a>
+      </div>
+    </section>
+
+    <section class="container panel" aria-labelledby="featured-heading">
+      <div class="section-head">
+        <h2 id="featured-heading">Featured Trails</h2>
+        <p id="visit-count" class="visit-count" aria-live="polite"></p>
+      </div>
+      <div class="filter-toolbar" role="toolbar" aria-label="Trail difficulty filters">
+        <button class="chip active" type="button" data-filter="all">All</button>
+        <button class="chip" type="button" data-filter="easy">Easy</button>
+        <button class="chip" type="button" data-filter="moderate">Moderate</button>
+        <button class="chip" type="button" data-filter="hard">Hard</button>
+      </div>
+      <p id="filter-status" class="filter-status">Showing all featured trails.</p>
+      <div id="featured-grid" class="trail-grid"></div>
+    </section>
+
+    <section class="container tips" aria-labelledby="tips-heading">
+      <h2 id="tips-heading">Quick Safety Notes</h2>
+      <ul>
+        <li>Start early when afternoon rain is likely in your area.</li>
+        <li>Carry at least one liter of water for every two hours of hiking.</li>
+        <li>Share your route with one person before you leave.</li>
+      </ul>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-content">
+      <p>&copy; <span id="year"></span> Trail Compass | Baker Mfitundinda</p>
+      <a href="references.html">References</a>
+    </div>
+  </footer>
+</body>
+</html>
