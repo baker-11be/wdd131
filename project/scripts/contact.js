@@ -23,7 +23,19 @@ function stampYear() {
 }
 
 function getStoredSubmissions() {
-  return JSON.parse(localStorage.getItem(storageKey) || "[]");
+  const raw = localStorage.getItem(storageKey);
+
+  if (!raw) {
+    return [];
+  }
+
+  try {
+    const parsed = JSON.parse(raw);
+    return Array.isArray(parsed) ? parsed : [];
+  } catch {
+    localStorage.removeItem(storageKey);
+    return [];
+  }
 }
 
 function saveSubmission(entry) {
@@ -134,9 +146,24 @@ function initForm() {
   form.addEventListener("submit", handleFormSubmit);
 }
 
+function setMinHikeDate() {
+  const hikeDate = document.querySelector("#hike-date");
+
+  if (!hikeDate) {
+    return;
+  }
+
+  const today = new Date();
+  const year = today.getFullYear();
+  const month = `${today.getMonth() + 1}`.padStart(2, "0");
+  const day = `${today.getDate()}`.padStart(2, "0");
+  hikeDate.min = `${year}-${month}-${day}`;
+}
+
 document.addEventListener("DOMContentLoaded", () => {
   setupMenu();
   stampYear();
+  setMinHikeDate();
   initForm();
   renderSubmissions();
 });

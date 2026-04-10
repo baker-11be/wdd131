@@ -115,7 +115,7 @@ function setDistanceOutput(value) {
 }
 
 function getFilters() {
-  const search = document.querySelector("#search")?.value.trim().toLowerCase() || "";
+  const search = document.querySelector("#search")?.value.trim() || "";
   const region = document.querySelector("#region")?.value || "all";
   const difficulty = document.querySelector("#difficulty")?.value || "all";
   const maxDistance = Number(document.querySelector("#max-distance")?.value || 22);
@@ -124,7 +124,7 @@ function getFilters() {
 }
 
 function trailMatches(trail, filters) {
-  const matchesSearch = trail.name.toLowerCase().includes(filters.search);
+  const matchesSearch = trail.name.toLowerCase().includes(filters.search.toLowerCase());
   const matchesRegion = filters.region === "all" || trail.region === filters.region;
   const matchesDifficulty = filters.difficulty === "all" || trail.difficulty === filters.difficulty;
   const matchesDistance = trail.distanceKm <= filters.maxDistance;
@@ -161,7 +161,19 @@ function restoreLastFilters() {
     return;
   }
 
-  const filters = JSON.parse(saved);
+  let filters;
+
+  try {
+    filters = JSON.parse(saved);
+  } catch {
+    localStorage.removeItem("tc_last_trail_filter");
+    return;
+  }
+
+  if (!filters || typeof filters !== "object") {
+    localStorage.removeItem("tc_last_trail_filter");
+    return;
+  }
 
   const searchNode = document.querySelector("#search");
   const regionNode = document.querySelector("#region");
@@ -197,7 +209,7 @@ function setupFilterListeners() {
 
   if (distance) {
     distance.addEventListener("input", () => {
-      setDistanceOutput(distance.value);
+      setDistanceOutput(Number(distance.value));
     });
   }
 }
